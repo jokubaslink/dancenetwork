@@ -23,15 +23,17 @@
     "luxon": "^3.3.0",
     "moment": "^2.29.4",
     "next": "13.2.4",
-    "react": "18.2.0",
+    "react": "^18.0.0",
     "react-big-calendar": "^1.6.9",
-    "react-dom": "18.2.0",
+    "react-dom": "^18.0.0",
     "styled-components": "^5.3.9",
     "tailwind-scrollbar-hide": "^1.1.7",
     "use-places-autocomplete": "^4.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
+    "eslint": "8.39.0",
+    "eslint-config-next": "13.3.4",
     "postcss": "^8.4.21",
     "tailwind-scrollbar": "^3.0.0",
     "tailwindcss": "^3.3.1"
