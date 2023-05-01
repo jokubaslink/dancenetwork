@@ -63,7 +63,7 @@ export default function AuthComponent({ loginType }) {
                   className="text-[10px] text-center font-medium"
                   onClick={() => router.push("/signup")}
                 >
-                  <p>If you don't have an account, press here to register.</p>
+                  <p>If you don&apos;t have an account, press here to register.</p>
                 </button>
               </>
             )}
