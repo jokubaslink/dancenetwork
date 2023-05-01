@@ -1,4 +1,4 @@
-import { useAuth } from "@/context/AuthContext";
+import { UseAuth } from "@/context/AuthContext";
 import { db } from "@/firebase";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
@@ -25,7 +25,7 @@ import Image from "next/image";
 import noUserImg from "@/assets/Avatar.png";
 
 export default function PostPage() {
-  const { currentUser } = useAuth();
+  const { currentUser } = UseAuth();
   const [post, setPost] = useState([]);
   const [liked, setLiked] = useState(false);
   const [likes, setLikes] = useState([]);
