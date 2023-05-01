@@ -19,7 +19,7 @@ export default function Adresas() {
     if (address) {
       loadPosts();
     }
-  }, [db, router.isReady]);
+  }, [ router.isReady, address]);
 
   async function loadPosts() {
     onSnapshot(

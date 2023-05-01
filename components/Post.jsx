@@ -41,13 +41,13 @@ export default function Post({ post, id }) {
       checkBookmarkedState();
       checkForNewProfilePicture();
     }
-  }, [db, id]);
+  }, [ id,  currentUser]);
 
   useEffect(() => {
     if (currentUser) {
       setLiked(likes.findIndex((like) => like.id === currentUser.uid) !== -1);
     }
-  }, [likes]);
+  }, [likes, currentUser]);
 
   async function checkBookmarkedState() {
     if (currentUser) {

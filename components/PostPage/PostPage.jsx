@@ -48,7 +48,7 @@ export default function PostPage() {
       );
       checkBookmarkedState();
     }
-  }, [db, router.isReady]);
+  }, [ router.isReady,  id]);
 
   async function getPostData() {
     const docRef = doc(db, "posts", id);
@@ -64,7 +64,7 @@ export default function PostPage() {
     if (currentUser) {
       setLiked(likes.findIndex((like) => like.id === currentUser.uid) !== -1);
     }
-  }, [likes]);
+  }, [likes, currentUser]);
 
   async function checkBookmarkedState() {
     if (currentUser) {

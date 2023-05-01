@@ -68,7 +68,7 @@ export default function Feed() {
           setPosts(snapshot.docs);
         }
       ),
-    [db]
+    []
   );
 
   const {

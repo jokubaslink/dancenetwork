@@ -17,7 +17,7 @@ export default function Bookmarks() {
     if (currentUser) {
       loadCurrentUserBookmarks();
     }
-  }, [db]);
+  }, [currentUser]);
 
   async function loadCurrentUserBookmarks() {
     const querySnapshot = await getDocs(

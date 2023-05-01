@@ -84,11 +84,11 @@ export default function Page({ type, data }) {
       <div className="border-b-2 border-gray-500">
         {type === "profile" ? (
           <h2 className="font-bold text-xl m-2">
-            {currentUser.displayName}'s posts:
+            {currentUser.displayName}&apos;s posts:
           </h2>
         ) : (
           <h2 className="font-bold text-xl m-2">
-            {currentUser.displayName}'s bookmarks:
+            {currentUser.displayName}&apos;s bookmarks:
           </h2>
         )}
       </div>

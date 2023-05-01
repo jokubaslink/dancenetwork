@@ -42,7 +42,7 @@ export default function EditPost({ postData }) {
 
   useEffect(() => {
     setValue(postData.location);
-  }, []);
+  }, [postData]);
 
   const { currentUser, submitPost } = UseAuth();
 
