@@ -24,8 +24,7 @@ export default function Page({ type, data }) {
 
   useEffect(() => {
     getEvents();
-
-  }, []);
+  }, [data]);
 
   function getEvents() {
     if (type === "bookmarks") {
