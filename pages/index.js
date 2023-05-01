@@ -1,13 +1,13 @@
 import Feed from "@/components/Feed";
 import Sidebar from "@/components/Sidebar";
 import StartComponent from "@/components/StartPage/StartComponent";
-import { useAuth } from "@/context/AuthContext";
+import { UseAuth } from "@/context/AuthContext";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
 export default function Home() {
-  const { currentUser } = useAuth();
+  const { currentUser } = UseAuth();
   const router = useRouter();
 
   if (!currentUser)

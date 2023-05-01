@@ -1,4 +1,4 @@
-import { useAuth } from "@/context/AuthContext";
+import { UseAuth } from "@/context/AuthContext";
 import { useLoadScript } from "@react-google-maps/api";
 import { useEffect, useState } from "react";
 import {
@@ -44,7 +44,7 @@ export default function EditPost({ postData }) {
     setValue(postData.location);
   }, []);
 
-  const { currentUser, submitPost } = useAuth();
+  const { currentUser, submitPost } = UseAuth();
 
   function updatePostData() {
     if (router.isReady) {

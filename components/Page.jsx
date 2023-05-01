@@ -1,4 +1,4 @@
-import { useAuth } from "@/context/AuthContext";
+import { UseAuth} from "@/context/AuthContext";
 import Image from "next/image";
 import noUserImg from "../assets/Avatar.png";
 import { useEffect, useState } from "react";
@@ -14,7 +14,7 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 import moment from "moment";
 
 export default function Page({ type, data }) {
-  const { currentUser } = useAuth();
+  const { currentUser } = UseAuth();
   const [posts, setPosts] = useState();
   const [calendarOpen, setCalendarOpen] = useState(false);
   const [events, setEvents] = useState([]);

@@ -1,14 +1,14 @@
 import Head from "next/head";
 import Link from "next/link";
 import Sidebar from "@/components/Sidebar";
-import { useAuth } from "@/context/AuthContext";
+import { UseAuth } from "@/context/AuthContext";
 import { useRef, useState } from "react";
 import { InsertPhoto } from "@mui/icons-material";
 import { useRouter } from "next/router";
 import { storage } from "@/firebase";
 import { getDownloadURL, ref, uploadString } from "firebase/storage";
 
-export default function settings() {
+export default function Settings() {
   const {
     currentUser,
     updateUserDisplayName,
@@ -16,7 +16,7 @@ export default function settings() {
     updateUsersEmail,
     updateUsersPassword,
     deleteAccount,
-  } = useAuth();
+  } = UseAuth();
   /*  */
   const [newPassword, setNewPassword] = useState({
     currentPassword: "",

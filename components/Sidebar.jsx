@@ -1,4 +1,4 @@
-import { useAuth } from "@/context/AuthContext";
+import { UseAuth } from "@/context/AuthContext";
 import SidebarLink from "./SidebarLink";
 import {
   Logout,
@@ -9,7 +9,7 @@ import {
 } from "@mui/icons-material";
 
 export default function Sidebar({ profile }) {
-  const { logOut, currentUser } = useAuth();
+  const { logOut, currentUser } = UseAuth();
 
   return (
     <>

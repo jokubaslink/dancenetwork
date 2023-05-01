@@ -1,6 +1,6 @@
 import Post from "@/components/Post";
 import Sidebar from "@/components/Sidebar";
-import { useAuth } from "@/context/AuthContext";
+import { UseAuth } from "@/context/AuthContext";
 import { db } from "@/firebase";
 import { collection, onSnapshot, query, where } from "firebase/firestore";
 import Head from "next/head";
@@ -13,7 +13,7 @@ export default function Adresas() {
   const [posts, setPosts] = useState([]);
 
   const { address } = router.query;
-  const { currentUser } = useAuth();
+  const { currentUser } = UseAuth();
 
   useEffect(() => {
     if (address) {

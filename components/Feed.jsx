@@ -1,4 +1,4 @@
-import { useAuth } from "@/context/AuthContext";
+import { UseAuth } from "@/context/AuthContext";
 import { useEffect, useState } from "react";
 import { db } from "@/firebase";
 import {
@@ -41,7 +41,7 @@ export default function Feed() {
     libraries: ["places"],
   });
 
-  const { currentUser, submitPost } = useAuth();
+  const { currentUser, submitPost } = UseAuth();
 
   function sendPost() {
     submitPost(postDetails);

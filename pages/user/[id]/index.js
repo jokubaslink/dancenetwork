@@ -1,4 +1,4 @@
-import { useAuth } from "@/context/AuthContext";
+import { UseAuth } from "@/context/AuthContext";
 import { useRouter } from "next/router";
 import {
   collection,
@@ -15,7 +15,7 @@ import Head from "next/head";
 import Link from "next/link";
 
 export default function User() {
-  const { currentUser, logOut } = useAuth();
+  const { currentUser, logOut } = UseAuth();
   const [userPosts, setUserPosts] = useState([]);
   const router = useRouter();
 

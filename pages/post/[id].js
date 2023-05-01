@@ -1,12 +1,12 @@
 import PostPage from "@/components/PostPage/PostPage";
 import Sidebar from "@/components/Sidebar";
-import { useAuth } from "@/context/AuthContext";
+import { UseAuth } from "@/context/AuthContext";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
 export default function Postpage() {
-  const { currentUser } = useAuth();
+  const { currentUser } = UseAuth();
   const router = useRouter();
 
   return (

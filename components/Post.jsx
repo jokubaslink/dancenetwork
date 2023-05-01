@@ -1,4 +1,4 @@
-import { useAuth } from "@/context/AuthContext";
+import { UseAuth } from "@/context/AuthContext";
 import { useEffect, useState } from "react";
 import {
   collection,
@@ -27,7 +27,7 @@ export default function Post({ post, id }) {
   const [liked, setLiked] = useState(false);
   const [bookmarks, setBookmarks] = useState([]);
   const [bookmarked, setBookmarked] = useState(false);
-  const { currentUser } = useAuth();
+  const { currentUser } = UseAuth();
   const router = useRouter();
 
   useEffect(() => {

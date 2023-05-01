@@ -33,7 +33,7 @@ import { getDownloadURL, ref, uploadString } from "firebase/storage";
 
 const AuthContext = createContext({});
 
-export function useAuth() {
+export function UseAuth() {
   return useContext(AuthContext);
 }
 

@@ -1,4 +1,4 @@
-import { useAuth } from "@/context/AuthContext";
+import { UseAuth } from "@/context/AuthContext";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 
@@ -9,7 +9,7 @@ export default function AuthComponent({ loginType }) {
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
 
-  const { logIn, logInUsingGoogle, currentUser, logOut, signUp } = useAuth();
+  const { logIn, logInUsingGoogle, currentUser, logOut, signUp } = UseAuth();
 
   function register() {
     signUp(email, password, username);

@@ -1,6 +1,6 @@
 import Page from "@/components/Page";
 import Sidebar from "@/components/Sidebar";
-import { useAuth } from "@/context/AuthContext";
+import { UseAuth } from "@/context/AuthContext";
 import { db } from "@/firebase";
 import { collection, getDocs, orderBy, query, where } from "firebase/firestore";
 import Head from "next/head";
@@ -8,9 +8,9 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 
-export default function bookmarks() {
+export default function Bookmarks() {
   const [bookmarkedPosts, setBookmarkedPosts] = useState([]);
-  const { currentUser } = useAuth();
+  const { currentUser } = UseAuth();
   const router = useRouter();
 
   useEffect(() => {
