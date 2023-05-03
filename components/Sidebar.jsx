@@ -13,7 +13,7 @@ export default function Sidebar({ profile }) {
 
   return (
     <>
-      <div className="flex lg:hidden w-full flex-col pt-2 sticky top-0">
+      <div className="flex lg:hidden w-full flex-col pt-2 sticky top-0 ">
         <div className="flex flex-col items-center space-y-8">
           {currentUser ? (<SidebarLink text={<DynamicFeed />} href={`/`} />) : (<SidebarLink text={<Search />} href={'/'} />)}
           {currentUser && (

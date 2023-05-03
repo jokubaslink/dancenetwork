@@ -12,7 +12,7 @@ export default function Home() {
 
   if (!currentUser)
     return (
-      <div className="w-screen">
+      <div className="w-screen bg-[#e7ecef]">
         <Head>
           <title>Dance Network</title>
           <link rel="icon" href="/favicon.ico" />
@@ -20,7 +20,7 @@ export default function Home() {
         <main className="min-h-screen flex flex-col max-w-[1500px] mx-auto">
           <div className="w-[200px] flex items-center justify-center space-x-3 h-10">
             <button
-              className="hover:border-b-2 border-blue-400 text-gray-500"
+              className="hover:border-b-2 border-[#A3CEF1] text-gray-500"
               onClick={() => {
                 router.push("/signin");
               }}
@@ -28,7 +28,7 @@ export default function Home() {
               Sign In
             </button>
             <button
-              className="hover:border-b-2 border-blue-400 text-gray-500"
+              className="hover:border-b-2 border-[#A3CEF1] text-gray-500"
               onClick={() => {
                 router.push("/signup");
               }}
@@ -39,14 +39,14 @@ export default function Home() {
           <StartComponent />
           <footer className="h-32 mx-auto text-center">
             <p className="font-medium text-gray-500">Dance Network</p>
-            <p className="font-medium text-blue-400">Jokūbas Linkevičius 2023</p>
+            <p className="font-medium text-[#A3CEF1]">Jokūbas Linkevičius 2023</p>
           </footer>
         </main>
       </div>
     );
 
   return (
-    <div className="w-screen">
+    <div className="w-screen bg-[#e7ecef]">
       <Head>
         <title>Dance Network || Feed</title>
         <link rel="icon" href="/favicon.ico" />
@@ -54,7 +54,7 @@ export default function Home() {
       <main className="min-h-screen flex flex-col max-w-[1500px] mx-auto">
         <div className="flex space-x-2 p-2 ">
           <h3
-            className="my-auto w-[300px] sm:w-[150px] font-medium text-xl cursor-pointer"
+            className="my-auto w-[300px] sm:w-[150px] font-medium text-xl cursor-pointer text-[#274C77]"
             onClick={() => {
               router.push("/");
             }}
@@ -76,11 +76,11 @@ export default function Home() {
           </div>
         </div>
         {/*Layoutas?*/}
-        <div className="flex justify-center min-h-screen border-t-2 border-gray-500 scrollbar-hide">
-          <div className="flex items-center flex-col p-2 sticky top-0 w-1/6 border-l-2 border-gray-500">
+        <div className="flex justify-center min-h-screen border-t-2 border-[#274C77] scrollbar-hide">
+          <div className="flex items-center flex-col p-2 sticky top-0 w-1/6">
             <Sidebar />
           </div>
-          <div className="relative lg:w-[725px] flex justify-center border-gray-500 border-x-2 w-4/6">
+          <div className="relative lg:w-[725px] flex justify-center border-[#274C77] w-4/6">
             <Feed />
           </div>
           <div className="w-1/6 hidden lg:flex items-center justify-center">

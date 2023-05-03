@@ -97,15 +97,11 @@ export default function Feed() {
 
   return (
     <div className="w-full min-h-screen">
-      <div className="flex-col flex items-center justify-center border-gray-500 py-6 border-b-2">
+      <div className="flex-col flex items-center justify-center border-[#274C77] py-6">
         <div className="mx-4 space-y-2">
-          <h2 className="text-2xl px-6 font-medium">
+          <h2 className="text-2xl text-center px-6 font-medium">
             Find events in your city!
           </h2>
-          {/*          <input
-            placeholder="Search"
-            className="border-gray-500 border-2 rounded p-2 w-full max-w-[400px]"
-          /> */}
           {isLoaded && <SearchInput />}
 
           <button
@@ -118,7 +114,7 @@ export default function Feed() {
                 timestamp: serverTimestamp(),
               });
             }}
-            className="w-full border-gray-500 border-2 rounded"
+            className="w-full text-[#FBF9FF] bg-[#6096BA] border-[#274C77] shadow-lg rounded-md border-2"
           >
             Post an event!
           </button>
@@ -127,7 +123,7 @@ export default function Feed() {
       {/*  */}
       <div className="">
         {openModal && (
-          <div className="flex flex-col border-gray-500 border-b-2 h-full p-2 space-y-5">
+          <div className="flex flex-col  h-full p-2 space-y-5">
             <div className="flex lg:space-x-2">
               <button
                 onClick={() => {
@@ -144,7 +140,7 @@ export default function Feed() {
                   });
                   setOpenModal(false);
                 }}
-                className="border-gray-500 border-2 w-8 h-8"
+                className="text-[#FBF9FF] bg-[#6096BA] border-[#274C77] shadow-lg rounded-md border-2 w-8 h-8"
               >
                 X
               </button>
@@ -154,7 +150,7 @@ export default function Feed() {
               <div className="flex flex-col space-y-4 items-center justify-center">
                 <input
                   placeholder="Event Title:"
-                  className="border-2 p-2 border-gray-500 w-full"
+                  className="border-2 p-2 border-[#274C77] w-full bg-[#e7ecef] placeholder:text-[#274C77]"
                   type="text"
                   value={postDetails.title}
                   onChange={(e) =>
@@ -162,7 +158,7 @@ export default function Feed() {
                   }
                 />
                 <textarea
-                  className="w-full resize-none p-2 h-full border-2 border-gray-500"
+                  className="w-full resize-none p-2 h-full border-2 border-[#274C77] bg-[#e7ecef] placeholder:text-[#274C77]"
                   name=""
                   id=""
                   placeholder="Event Description:"
@@ -179,10 +175,10 @@ export default function Feed() {
               {/*  */}
 
               <div className="flex flex-col">
-                <h2>Event start/end date:</h2>
+                <h2 className="mb-2">Event start/end date:</h2>
                 <div className="flex flex-col space-y-4 items-center justify-center">
                   <input
-                    className="border-2 p-2 border-gray-500 w-full"
+                    className="border-2 p-2 border-[#274C77] w-full bg-[#e7ecef] placeholder:text-[#274C77]"
                     type="datetime-local"
                     value={postDetails.startDate}
                     onChange={(e) =>
@@ -193,7 +189,7 @@ export default function Feed() {
                     }
                   />
                   <input
-                    className="border-2 p-2 border-gray-500 w-full"
+                    className="border-2 p-2 w-full border-[#274C77] bg-[#e7ecef] placeholder:text-[#274C77]"
                     type="datetime-local"
                     value={postDetails.endDate}
                     onChange={(e) =>
@@ -207,39 +203,18 @@ export default function Feed() {
               </div>
 
               <div className="">
-                <h2>Event Location:</h2>
+                <h2 className="mb-2">Event Location:</h2>
                 <div className="space-y-4 lg:space-y-0">
-                  {/*                   <input
-                    className="border-2 border-gray-500 w-full lg:w-[00px]"
-                    type="text"
-                    placeholder="City:"
-                    value={postDetails.city}
-                    onChange={(e) =>
-                      setPostDetails({ ...postDetails, city: e.target.value })
-                    }
-                  />
-                  <input
-                    className="border-2 border-gray-500 w-full"
-                    type="text"
-                    placeholder="Street:"
-                    value={postDetails.street}
-                    onChange={(e) =>
-                      setPostDetails({ ...postDetails, street: e.target.value })
-                    }
-                  /> */}
-
-                  {/* <PostInput />  */}
-                  {/* Kitoks inputas event locationui */}
                   {isLoaded && (
-                    <Combobox onSelect={handleSelect} className="w-full">
+                    <Combobox onSelect={handleSelect} className="w-full  ">
                       <ComboboxInput
-                        className=" w-full h-16 p-4 border-2 border-gray-500"
+                        className=" w-full h-16 p-4 border-2 border-[#274C77] bg-[#e7ecef] placeholder:text-[#274C77]"
                         placeholder="Type an address to find events in.."
                         disabled={!ready}
                         value={value}
                         onChange={(e) => setValue(e.target.value)}
                       />
-                      <ComboboxPopover className="border-b-2 bg-blue-50 border-x-2 border-gray-500">
+                      <ComboboxPopover className="border-b-2 bg-[#e7ecef]-50 border-x-2 border-[#274C77]">
                         <ComboboxList className="flex flex-col justify-center space-y-5">
                           {status === "OK" &&
                             data.map(({ place_id, description }) => (
@@ -257,7 +232,7 @@ export default function Feed() {
               </div>
             </div>
             <input
-              className="border-2 p-2 border-gray-500 w-full"
+              className="border-2 p-2 border-[#274C77] w-full bg-[#e7ecef] placeholder:text-[#274C77]"
               type="text"
               placeholder="Official event link."
               value={postDetails.linkForMoreEventPostInfo}
@@ -270,7 +245,7 @@ export default function Feed() {
             />
             <button
               onClick={sendPost}
-              className="border-2 border-gray-500 rounded"
+              className="text-[#FBF9FF] bg-[#6096BA] border-[#274C77] shadow-lg rounded-md border-2"
             >
               Post the event
             </button>

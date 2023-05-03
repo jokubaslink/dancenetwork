@@ -13,11 +13,11 @@ export default function StartComponent() {
   });
 
   return (
-    <div className="m-auto space-y-4">
-      <h1 className="text-2xl lg:text-6xl font-bold text-gray-500 text-center">
+    <div className="m-auto space-y-5">
+      <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-500 text-center">
         Dance Network 
       </h1>
-      <div className="space-y-4">
+      <div className="space-y-6">
         <h3 className="lg:text-2xl text-lg text-center text-blue-400">
           Find Events Near You!
         </h3>

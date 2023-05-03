@@ -113,14 +113,14 @@ export default function PostPage() {
   }
 
   return (
-    <div className="w-full">
+    <div className="w-full bg-gray-0 rounded-md bg-clip-padding backdrop-filter  bg-opacity-0 border border-gray-100 shadow-xl ">
       {!editPost && (
-        <div className="w-full flex flex-col border-gray-500 border-b-2 p-4 h-content space-y-2">
+        <div className="w-full flex flex-col p-4 h-content space-y-2 ">
           <div className="lg:flex-row flex flex-col lg:items-center mb-2">
             <div className="flex lg:space-x-4 mb-2 items-center lg:mr-4 lg:mb-0">
               {post.photoURL ? (
                 <Image
-                  className="rounded-full hidden lg:block border-black border-2 h-[40px]"
+                  className="rounded-full hidden lg:block border-[#6096BA] border-2 h-[40px]"
                   height={40}
                   width={40}
                   src={post.photoURL}
@@ -128,7 +128,7 @@ export default function PostPage() {
                 />
               ) : (
                 <Image
-                  className="rounded-full hidden lg:block border-black border-2"
+                  className="rounded-full hidden lg:block border-[#6096BA] border-2"
                   height={40}
                   width={40}
                   src={noUserImg}
@@ -152,6 +152,7 @@ export default function PostPage() {
               {currentUser && currentUser.uid === post?.id && (
                 <div className="flex gap-2">
                   <button
+                  className="text-[#274C77]"
                     onClick={() => {
                       deleteDoc(doc(db, "posts", id));
                       router.push("/");
@@ -160,6 +161,7 @@ export default function PostPage() {
                     <DeleteIcon />
                   </button>
                   <button
+                  className="text-[#274C77]"
                     onClick={() => {
                       setEditPost(!editPost);
                     }}
@@ -217,7 +219,7 @@ export default function PostPage() {
       )}
       {editPost && (
         <button
-          className="z-2 ml-2 mt-2 px-2 border-2 border-gray-500"
+          className="z-2 ml-2 mt-2 px-2 text-[#FBF9FF] bg-[#6096BA] border-[#274C77] shadow-lg rounded-md border-2 w-8 h-8"
           onClick={() => {
             setEditPost(false);
           }}

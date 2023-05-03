@@ -87,15 +87,15 @@ export default function Settings() {
   }
 
   return (
-    <div className="w-screen">
+    <div className="w-screen bg-[#e7ecef]">
       <Head>
         <title>Dance Network || Settings</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="min-h-screen flex flex-col max-w-[1500px] mx-auto">
+      <main className="min-h-screen flex flex-col max-w-[1500px] mx-auto ">
         <div className="flex space-x-2 p-2">
           <h3
-            className="my-auto font-medium text-xl cursor-pointer"
+            className="my-auto font-medium text-xl cursor-pointer text-[#274C77]"
             onClick={() => {
               router.push("/");
             }}
@@ -116,12 +116,12 @@ export default function Settings() {
             </h3>
           </div>
         </div>
-        <div className="flex justify-center min-h-screen border-t-2 border-gray-500 scrollbar-hide">
-          <div className="flex items-center flex-col p-2 sticky top-0 w-1/6 border-l-2 border-gray-500">
+        <div className="flex justify-center min-h-screen border-t-2 border-[#274C77] scrollbar-hide">
+          <div className="flex items-center flex-col p-2 sticky top-0 w-1/6">
             <Sidebar />
           </div>
-          <div className="relative lg:w-[725px] flex flex-col pt-8 pl-2 sm:pl-8 space-y-5 border-gray-500 border-x-2 w-4/6">
-            <h2 className="text-2xl">Settings</h2>
+          <div className="relative lg:w-[725px] flex flex-col pt-8 pl-2 sm:pl-8 space-y-5 w-4/6">
+            <h2 className="text-2xl md:text-3xl">Settings</h2>
             <div className="w-2/3">
               <ul className="space-y-6">
                 <li className="space-y-3">
@@ -144,7 +144,7 @@ export default function Settings() {
                         onChange={(e) => setNewUsername(e.target.value)}
                       />
                       <button
-                        className="p-2 text-sm sm:text-md w-full sm:w-[250px] border-gray-500 border-2 rounded"
+                        className="p-2 text-sm sm:text-md w-full sm:w-[250px] text-[#FBF9FF] bg-[#6096BA] border-[#274C77] shadow-lg rounded-md border-2"
                         onClick={() => {
                           changeUsername();
                         }}
@@ -173,7 +173,7 @@ export default function Settings() {
                         <div className="flex gap-2 items-center">
                           <h4 className="text-sm">Select an Image.</h4>
                           <div onClick={() => filePickerRef.current.click()}>
-                            <InsertPhoto className="h-[22px]" />
+                            <InsertPhoto className="h-[22px] text-[#274C77]" />
                             <input
                               type="file"
                               hidden
@@ -184,7 +184,7 @@ export default function Settings() {
                         </div>
 
                         <button
-                          className="text-sm sm:text-md border-gray-500 border-2 rounded"
+                          className="text-sm sm:text-md text-[#FBF9FF] bg-[#6096BA] border-[#274C77] shadow-lg rounded-md border-2 p-1"
                           onClick={() => {
                             sendProfilePic();
                           }}
@@ -212,7 +212,7 @@ export default function Settings() {
                         <input
                           type="email"
                           placeholder="Type in your new email address"
-                          className=" w-full placeholder:text-sm sm:placeholder:text-md sm:w-[250px] border-2 border-gray-500 p-2"
+                          className=" w-full placeholder:text-sm sm:placeholder:text-md sm:w-[250px] border-2 border-[#274C77] bg-[#e7ecef] placeholder:text-[#274C77] p-2"
                           onChange={(e) =>
                             setEmail({ ...email, newEmail: e.target.value })
                           }
@@ -220,7 +220,7 @@ export default function Settings() {
                         <input
                           type="email"
                           placeholder="Type in your account password."
-                          className=" w-full placeholder:text-sm sm:placeholder:text-md sm:w-[250px] border-2 border-gray-500 p-2"
+                          className=" w-full placeholder:text-sm sm:placeholder:text-md sm:w-[250px] border-2 border-[#274C77] bg-[#e7ecef] placeholder:text-[#274C77] p-2"
                           onChange={(e) =>
                             setEmail({
                               ...email,
@@ -229,7 +229,7 @@ export default function Settings() {
                           }
                         />
                         <button
-                          className="p-2 text-sm sm:text-md  w-full sm:w-[250px] border-gray-500 border-2 rounded"
+                          className="p-2 text-sm sm:text-md  w-full sm:w-[250px] text-[#FBF9FF] bg-[#6096BA] border-[#274C77] shadow-lg rounded-md border-2"
                           onClick={changeEmail}
                         >
                           Submit changes.
@@ -257,7 +257,7 @@ export default function Settings() {
                           <input
                             type="password"
                             placeholder="Type in your new password"
-                            className="w-full placeholder:text-sm sm:placeholder:text-md sm:w-[250px] border-2 border-gray-500 p-2"
+                            className="w-full placeholder:text-sm sm:placeholder:text-md sm:w-[250px] border-2 border-[#274C77] bg-[#e7ecef] placeholder:text-[#274C77] p-2"
                             onChange={(e) =>
                               setNewPassword({
                                 ...newPassword,
@@ -268,7 +268,7 @@ export default function Settings() {
                           <input
                             type="password"
                             placeholder="Type in your old password"
-                            className="placeholder:text-sm sm:placeholder:text-md w-full  sm:w-[250px] border-2 border-gray-500 p-2"
+                            className="placeholder:text-sm sm:placeholder:text-md w-full  sm:w-[250px] border-2 border-[#274C77] bg-[#e7ecef] placeholder:text-[#274C77] p-2"
                             onChange={(e) =>
                               setNewPassword({
                                 ...newPassword,
@@ -278,7 +278,7 @@ export default function Settings() {
                           />
                         </div>
                         <button
-                          className="p-2 text-sm sm:text-md  w-full sm:w-[250px] border-gray-500 border-2 rounded"
+                          className="p-2 text-sm sm:text-md  w-full sm:w-[250px] text-[#FBF9FF] bg-[#6096BA] border-[#274C77] shadow-lg rounded-md border-2"
                           onClick={changePassword}
                         >
                           Submit changes.

@@ -32,15 +32,15 @@ export default function SearchInput() {
   }
 
   return (
-    <Combobox onSelect={handleSelect} className="w-full">
+    <Combobox onSelect={handleSelect} className="w-[300px] sm:w-[350px] md:w-[450px] lg:w-[500px]">
       <ComboboxInput
-        className=" w-full h-16 p-4 border-b-2 border-gray-500"
+        className=" w-full h-16 p-4 bg-[#e7ecef] border-b-[#274C77] border-2 shadow-lg rounded-md"
         placeholder="Type an address to find events in.."
         disabled={!ready}
         value={value}
         onChange={(e) => setValue(e.target.value)}
       />
-      <ComboboxPopover className="border-b-2 bg-blue-50 border-x-2 border-gray-500">
+      <ComboboxPopover className="border-b-2 bg-[#e7ecef] border-x-2 border-gray-500">
         <ComboboxList className="flex flex-col justify-center space-y-5">
           {status === "OK" &&
             data.map(({ place_id, description }) => (

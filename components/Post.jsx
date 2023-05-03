@@ -142,12 +142,13 @@ export default function Post({ post, id }) {
   }
 
   return (
-    <div className="w-full flex flex-col border-gray-500 border-b-2 p-4 h-content space-y-2">
+    <div className="bg-gray-0 rounded-md bg-clip-padding backdrop-filter  bg-opacity-0 border border-gray-100 shadow-xl
+    w-full flex flex-col  p-4 h-content space-y-2 mb-2"> {/* border-gray-500 border-b-2 */}
       <div className="lg:flex-row flex flex-col lg:items-center mb-2">
         <div className="flex lg:space-x-4 mb-2 lg:items-center lg:mr-4 lg:mb-0">
           {post.photoURL ? (
             <Image
-              className="rounded-full hidden lg:block border-black border-2 h-[40px]"
+              className="rounded-full hidden lg:block border-[#A3CEF1] border-2 h-[40px]"
               height={40}
               width={40}
               src={post.photoURL}
@@ -155,7 +156,7 @@ export default function Post({ post, id }) {
             />
           ) : (
             <Image
-              className="rounded-full hidden lg:block border-black border-2"
+              className="rounded-full hidden lg:block border-[#A3CEF1] border-2"
               height={40}
               width={40}
               alt="Post Creator Profile Picture"
@@ -179,6 +180,7 @@ export default function Post({ post, id }) {
           )}
           {currentUser && currentUser.uid === post?.id && (
             <button
+            className="text-[#274C77]"
               onClick={() => {
                 deleteDoc(doc(db, "posts", id));
               }}
@@ -210,12 +212,12 @@ export default function Post({ post, id }) {
       {currentUser && (
         <div className="space-x-4">
           {liked ? (
-            <button onClick={likePost} className="text-red-700">
+            <button onClick={likePost} className="text-red-400">
               <FavoriteIcon />
               {likes.length}
             </button>
           ) : (
-            <button onClick={likePost} className="text-red-900">
+            <button onClick={likePost} className="text-red-700">
               <FavoriteIcon />
               {likes.length > 0 && `${likes.length}`}
             </button>

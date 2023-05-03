@@ -35,7 +35,7 @@ export default function Adresas() {
   }
 
   return (
-    <div className="w-screen">
+    <div className="w-screen bg-[#e7ecef]">
       <Head>
         <title>Dance Network || Search</title>
         <link rel="icon" href="/favicon.ico" />
@@ -43,7 +43,7 @@ export default function Adresas() {
       <main className="min-h-screen flex flex-col max-w-[1500px] mx-auto">
         <div className="flex space-x-2 p-2">
           <h3
-            className="my-auto font-medium text-xl cursor-pointer"
+            className="my-auto font-medium text-xl cursor-pointer text-[#274C77]"
             onClick={() => {
               router.push("/");
             }}
@@ -85,14 +85,14 @@ export default function Adresas() {
           )}
         </div>
         {/*Layoutas?*/}
-        <div className="flex justify-center min-h-screen border-t-2 border-gray-500 scrollbar-hide">
-          <div className="flex items-center flex-col p-2 sticky top-0 w-1/6 border-l-2 border-gray-500">
+        <div className="flex justify-center min-h-screen border-t-2 border-[#274C77] scrollbar-hide">
+          <div className="flex items-center flex-col p-2 sticky top-0 w-1/6 ">
             <Sidebar />
           </div>
 
-          <div className="relative space-y-6 lg:w-[725px] flex flex-col items-center border-gray-500 border-x-2 w-4/6">
-            <div className="py-2 w-full flex items-center justify-around border-b-2 border-gray-500">
-              <h1>All events in {address}</h1>
+          <div className="relative space-y-6 lg:w-[725px] flex flex-col items-center w-4/6">
+            <div className="mt-4 w-full flex items-center justify-around ">
+              <h1 className="font-medium text-xl md:text-2xl">All events in {address}</h1>
             </div>
             <div className="w-full">
               {posts.length === 0 && (<div className="pt-64">

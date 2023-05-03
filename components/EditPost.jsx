@@ -77,7 +77,7 @@ export default function EditPost({ postData }) {
           <div className="flex flex-col space-y-4">
             <input
               placeholder="Event Title:"
-              className="border-2 border-gray-500 w-full"
+              className="border-2 border-[#274C77] bg-[#e7ecef] placeholder:text-[#274C77] w-full"
               type="text"
               value={postDetails.title}
               onChange={(e) =>
@@ -85,7 +85,7 @@ export default function EditPost({ postData }) {
               }
             />
             <textarea
-              className="w-full resize-none	 h-full border-2 border-gray-500"
+              className=" resize-none	 h-full border-2 border-[#274C77] w-full bg-[#e7ecef] placeholder:text-[#274C77]"
               name=""
               id=""
               placeholder="Event Description:"
@@ -106,7 +106,7 @@ export default function EditPost({ postData }) {
           <h2>Event start/end date:</h2>
           <div className="flex flex-col space-y-4 items-center justify-center">
             <input
-              className="border-2 border-gray-500 w-full"
+              className="border-2 border-[#274C77] bg-[#e7ecef] placeholder:text-[#274C77] w-full"
               type="datetime-local"
               value={postDetails.startDate}
               onChange={(e) =>
@@ -117,7 +117,7 @@ export default function EditPost({ postData }) {
               }
             />
             <input
-              className="border-2 border-gray-500 w-full"
+              className="border-2 border-[#274C77] bg-[#e7ecef] placeholder:text-[#274C77] w-full"
               type="datetime-local"
               value={postDetails.endDate}
               onChange={(e) =>
@@ -157,13 +157,13 @@ export default function EditPost({ postData }) {
             {isLoaded && (
               <Combobox onSelect={handleSelect} className="w-full">
                 <ComboboxInput
-                  className="w-full h-full p-4 border-2 border-gray-500"
+                  className="w-full h-full p-4 border-2 border-[#274C77] bg-[#e7ecef] placeholder:text-[#274C77]"
                   placeholder="Type an address to find events in.."
                   disabled={!ready}
                   value={value}
                   onChange={(e) => setValue(e.target.value)}
                 />
-                <ComboboxPopover className="border-b-2 border-gray-500">
+                <ComboboxPopover className="border-b-2 bg-[#e7ecef] border-x-2 border-[#274C77]">
                   <ComboboxList className="space-y-5">
                     {status === "OK" &&
                       data.map(({ place_id, description }) => (
@@ -181,7 +181,7 @@ export default function EditPost({ postData }) {
         </div>
       </div>
       <input
-        className="border-2 border-gray-500 w-full"
+        className="border-2 border-[#274C77] bg-[#e7ecef] placeholder:text-[#274C77] w-full"
         type="text"
         placeholder="Official event link."
         value={postDetails.linkForMoreEventPostInfo}
@@ -197,7 +197,7 @@ export default function EditPost({ postData }) {
           updatePostData();
           router.reload();
         }}
-        className="border-2 border-gray-500 rounded"
+        className="text-[#FBF9FF] bg-[#6096BA] border-[#274C77] shadow-lg rounded-md border-2"
       >
         Change event data.
       </button>

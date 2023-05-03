@@ -46,11 +46,11 @@ export default function Page({ type, data }) {
 
   return (
     <div className="w-full min-h-screen">
-      <div className="flex-col flex  border-gray-500 p-6 border-b-2">
+      <div className="flex-col flex p-6 ">
         <div className="flex items-center md:space-x-4">
           {currentUser.photoURL ? (
             <Image
-              className="rounded-full hidden md:block  border-black border-2 h-[50px]"
+              className="rounded-full hidden md:block  border-[#A3CEF1] border-2 h-[50px]"
               height={50}
               width={50}
               src={currentUser.photoURL}
@@ -58,7 +58,7 @@ export default function Page({ type, data }) {
             />
           ) : (
             <Image
-              className="rounded-full hidden md:block border-black border-2"
+              className="rounded-full hidden md:block border-[#A3CEF1] border-2"
               alt='User Profile Picture'
               height={50}
               width={50}
@@ -80,13 +80,13 @@ export default function Page({ type, data }) {
         </div>
       </div>
       {/*  */}
-      <div className="border-b-2 border-gray-500">
+      <div className="text-center">
         {type === "profile" ? (
-          <h2 className="font-bold text-xl m-2">
+          <h2 className="font-medium text-xl md:text-2xl mb-4">
             {currentUser.displayName}&apos;s posts:
           </h2>
         ) : (
-          <h2 className="font-bold text-xl m-2">
+          <h2 className="font-medium text-xl md:text-2xl mb-4">
             {currentUser.displayName}&apos;s bookmarks:
           </h2>
         )}
@@ -122,7 +122,7 @@ export default function Page({ type, data }) {
           </div>
         )}
 
-        <div className="flex flex-col p-4 h-64 space-y-2"></div>
+        {/* <div className="flex flex-col p-4 h-64 space-y-2"></div> */}
       </div>
     </div>
   );
