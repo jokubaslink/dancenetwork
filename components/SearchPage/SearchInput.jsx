@@ -32,7 +32,7 @@ export default function SearchInput() {
   }
 
   return (
-    <Combobox onSelect={handleSelect} className="w-[300px] sm:w-[350px] md:w-[450px] lg:w-[500px]">
+    <Combobox onSelect={handleSelect} className="w-full sm:w-[350px] md:w-[450px] lg:w-[500px]">
       <ComboboxInput
         className=" w-full h-16 p-4 bg-[#e7ecef] border-b-[#274C77] border-2 shadow-lg rounded-md"
         placeholder="Type an address to find events in.."

@@ -90,6 +90,7 @@ export default function Post({ post, id }) {
         timestamp: post.timestamp,
         startDate: post.startDate,
         endDate: post.endDate,
+        photoURL: post.photoURL,
       });
       setBookmarked(true);
     }

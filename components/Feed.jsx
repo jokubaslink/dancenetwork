@@ -33,6 +33,7 @@ export default function Feed() {
     endDate: "",
     location: "",
     locations: [],
+    photoURL: "",
     linkForMoreEventPostInfo: "",
   });
   const [posts, setPosts] = useState([]);
@@ -111,6 +112,7 @@ export default function Feed() {
                 ...postDetails,
                 id: currentUser.uid,
                 username: currentUser.displayName,
+                photoURL: currentUser.photoURL,
                 timestamp: serverTimestamp(),
               });
             }}
